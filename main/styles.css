@@ -1,0 +1,20 @@
+body{
+  padding: 25px;
+  background-color: #F9F8F6;
+}
+#qmTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font: 12;
+  background-color: none;
+  color: black;
+  padding: 12px;
+  text-align: center;
+}
+
+#bgContainer {
+  border-radius: 25px;
+  background-color: white;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
