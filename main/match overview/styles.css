@@ -15,7 +15,8 @@ body{
   border-radius: 25px;
   border: 2px solid darkgray;
   background-color: white;
+  text-align: center;
   padding: 20px;
-  width: auto;
+  width: 1300px;
   height: auto;
 }
