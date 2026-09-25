@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Event matches
+    </title>
+    <body>
+        <table>
+            <th>Match</th>
+            <th>Est time</th>
+            <th>Red alliance</th>
+            <th>Blue alliance</th>
+                
+            {%for match in quali_matches%}
+            <tr>
+                <td>{{ match["match_number"] }}</td>
+
+                <td>{{ match["predicted_time"] }}</td>
+
+                <td>{{ match["alliances"]["red"]["team_keys"] }}</td>
+                <td>{{ match["alliances"]["blue"]["team_keys"] }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </body>
+</html>

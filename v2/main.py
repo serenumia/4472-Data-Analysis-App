@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
 import requests
 import os 
+from dotenv import load_dotenv
 
+load_dotenv()
 app = Flask(__name__)
 
 @app.route('/')
@@ -23,6 +25,9 @@ def event():
     response = requests.get(url, headers=headers)
 
     matches = response.json()
+
+    print("WE GOT HERE", flush=True)
+    print(matches[0], flush=True)
 
     qm_matches = []
     for match in matches:
