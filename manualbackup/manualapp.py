@@ -12,9 +12,9 @@ def home2():
 
 @app.route("/event2")
 def event2():
-    event2_code = request.args.get("event_code")
+    event2_code = request.args.get("event2_code")
 
-    match_number= request.args.get("match_number")
+    match_number= request.args.get("match2_number")
 
     api_key = os.environ.get("TBA_API_KEY")
 
@@ -29,12 +29,12 @@ def event2():
     matches = response.json()
 
 
-    qm_matches = []
     for match in matches:
-        if match["comp_level"] == "qm":
-            qm_matches.append(match)
+        if match["match_number"] == match_number:
+            selected_match = match
+            break
 
-    return render_template('event2.html')
+    return render_template('event2.html', selected_match=selected_match)
 
 
 if __name__ == '__main__':
