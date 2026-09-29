@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Match {{["match_number"]}}
+    </title>
+    <body>
+        <h2>Red Alliance</h2>
+
+{% for team in red_teams %}
+
+    <h3>Team {{ team["team_number"] }}</h3>
+
+    <p>Drivetrain: {{ team["data"]["drivetrain"] }}</p>
+    <p>Shooter: {{ team["data"]["shooter_type"] }}</p>
+    <p>Hopper Size: {{ team["data"]["hopper_size"] }}</p>
+    <p>Speed Rating: {{ team["data"]["speed_rating"] }}</p>
+    <p>2026 Drive Rating: {{ team["data"]["driv_rating"] }}</p>
+    <p>Accuracy Rating: {{ team["data"]["accuracy_rating"] }}</p>
+    <p>SOTM: {{ team["data"]["sotm"] }}</p>
+
+{% endfor %}
+        <h2>Blue Alliance</h2>
+
+{% for team in blue_teams %}
+
+    <h3>Team {{ team["team_number"] }}</h3>
+
+    <p>Drivetrain: {{ team["data"]["drivetrain"] }}</p>
+    <p>Shooter: {{ team["data"]["shooter_type"] }}</p>
+    <p>Hopper Size: {{ team["data"]["hopper_size"] }}</p>
+    <p>Speed Rating: {{ team["data"]["speed_rating"] }}</p>
+    <p>2026 Drive Rating: {{ team["data"]["driv_rating"] }}</p>
+    <p>Accuracy Rating: {{ team["data"]["accuracy_rating"] }}</p>
+    <p>SOTM: {{ team["data"]["sotm"] }}</p>
+
+{% endfor %}
+    </body>
+</html>
